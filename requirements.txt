@@ -1,0 +1,10 @@
+ipykernel
+langchain
+flask
+sentence-transformers
+pypdf
+python-dotenv
+pinecone[grpc]
+langchain-pinecone
+langchain-community
+-e .
