@@ -1,5 +1,7 @@
 ipykernel
 langchain
+langchain-groq
+llama-index
 flask
 sentence-transformers
 pypdf
