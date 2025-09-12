@@ -1,6 +1,6 @@
-from flask import Flask, render_template, jsonify, request
+from flask import Flask, render_template, request
 from src.helper import download_hugging_face_embeddings
-from langchain_pinecone import PineconeVectorStore
+from langchain_pinecone.vectorstores import PineconeVectorStore
 from langchain_groq import ChatGroq
 from langchain.chains import create_retrieval_chain
 from langchain.chains.combine_documents import create_stuff_documents_chain
@@ -36,7 +36,7 @@ docsearch = PineconeVectorStore.from_existing_index(
 
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":3})
 
-chatModel = ChatGroq(api_key=GROQ_API_KEY,model="llama3-8b-8192",temperature=0.5)
+chatModel = ChatGroq(api_key=GROQ_API_KEY,model="llama-3.3-70b-versatile",temperature=0.5)
 prompt = ChatPromptTemplate.from_messages(
     [
         ("system", system_prompt),

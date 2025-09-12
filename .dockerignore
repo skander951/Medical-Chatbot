@@ -1,0 +1,67 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+
+# Ignore virtual environments
+.env
+.venv/
+env/
+venv/
+
+# Ignore logs
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore version control files
+.git
+.gitignore
+.gitattributes
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile*
+
+# Ignore build artifacts
+build/
+dist/
+*.egg
+.eggs/
+
+# Ignore IDE/editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore test outputs
+.coverage
+htmlcov/
+pytest_cache/
+.tox/
+.mypy_cache/
+.cache/
+
+# Ignore notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore large files/data
+*.tar
+*.zip
+*.gz
+*.rar
+*.7z
+*.bak
+
+# Ignore node_modules if using JS/TS
+node_modules/
+
+# Ignore local configs/secrets
+*.env.local
+*.secret
