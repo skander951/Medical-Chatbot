@@ -10,6 +10,8 @@ from src.prompt import *
 import os
 
 
+
+
 app = Flask(__name__)
 
 
@@ -30,9 +32,6 @@ docsearch = PineconeVectorStore.from_existing_index(
     index_name=index_name,
     embedding=embeddings
 )
-
-
-
 
 retriever = docsearch.as_retriever(search_type="similarity", search_kwargs={"k":3})
 
